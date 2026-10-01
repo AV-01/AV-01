@@ -43,6 +43,17 @@ def arguments() -> argparse.Namespace:
     parser.add_argument(
         "--line-spacing", type=int, default=4, help="Extra pixels between lines."
     )
+    parser.add_argument(
+        "--binary",
+        action="store_true",
+        help="Use only fully opaque text pixels and transparent background pixels.",
+    )
+    parser.add_argument(
+        "--threshold",
+        type=int,
+        default=128,
+        help="Alpha cutoff (0-255) used by --binary; default: 128.",
+    )
     return parser.parse_args()
 
 
@@ -50,6 +61,8 @@ def main() -> None:
     args = arguments()
     if args.size <= 0 or args.padding < 0 or args.outline_width < 0:
         raise SystemExit("--size must be positive; --padding and --outline-width cannot be negative.")
+    if not 0 <= args.threshold <= 255:
+        raise SystemExit("--threshold must be between 0 and 255.")
     if not args.font.is_file():
         raise SystemExit(f"Font file not found: {args.font}")
 
@@ -76,6 +89,14 @@ def main() -> None:
         stroke_width=stroke_width,
         stroke_fill=stroke_fill,
     )
+
+    if args.binary:
+        # Font rendering normally uses partially transparent edge pixels. Replacing
+        # them with a thresholded alpha mask produces crisp black/white pixels.
+        alpha = image.getchannel("A").point(lambda value: 255 if value >= args.threshold else 0)
+        solid = Image.new("RGBA", image.size, args.color)
+        solid.putalpha(alpha)
+        image = solid
 
     args.output.parent.mkdir(parents=True, exist_ok=True)
     image.save(args.output, "PNG")

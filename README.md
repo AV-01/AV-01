@@ -1,16 +1,14 @@
-## Hi there 👋
+# hey, I'm Aryavrat 👋
 
-<!--
-**AV-01/AV-01** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+i'm a CS student at UIUC mostly just building things that bridge code and the physical world. 
 
-Here are some ideas to get you started:
+**what I'm tinkering with lately:**
+- **hardware:** messing around with microcontrollers (ESP32, Pi Pico), designing custom PCBs in KiCad, and 3D printing.
+- **software:** writing backend systems and CLI tools in Go, C++, and occasionally Rust.
+- **recent builds:** a camera-guided robotic arm, and a dockerized go api for school schedules.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+**when I'm not coding:**
+I'm probably trying to shave a few seconds off my rubiks cube average, binging Game Changer, or studying.
+
+**let's chat:**
+always down to talk about embedded systems, hackathons, or Deltarune. drop me an email at avm8@illinois.edu or find me on discord(.secretspy).

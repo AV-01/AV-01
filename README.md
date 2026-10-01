@@ -8,7 +8,7 @@
 
 <p align="center">CS student at UIUC, building things that bridge code and the physical world.</p>
 
-<p align="center"><a href="mailto:avm8@illinois.edu">email</a> · Discord: <code>.secretspy</code></p>
+<!-- <p align="center"><a href="mailto:avm8@illinois.edu">email</a> · Discord: <code>.secretspy</code></p> -->
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/readme/what-im-tinkering-with-lately-white.png">
@@ -34,4 +34,4 @@ I’m probably trying to shave a few seconds off my Rubik’s Cube average, bing
   <img alt="Let's chat" src="assets/readme/lets-chat-black.png" width="220">
 </picture>
 
-I’m always down to talk embedded systems, hackathons, or Deltarune. Reach me by [email](mailto:avm8@illinois.edu) or on Discord at `.secretspy`.
+I’m always down to talk embedded systems, hackathons, or Deltarune. Reach me by [email](mailto:avm8@illinois.edu) or on Discord by joining [this server!](https://discord.gg/8j7TtYnyx7)
